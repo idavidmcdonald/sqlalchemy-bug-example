@@ -16,7 +16,7 @@ class A(Base):
 
     id = Column(Integer, primary_key=True)
     b_id = Column(ForeignKey('b.id'))
-    a_json = Column(Mutable.as_mutable(JSON))
+    a_json = Column(JSON)
 
 class B(Base):
     __tablename__ = 'b'
